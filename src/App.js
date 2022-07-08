@@ -117,6 +117,12 @@ class App extends Component {
           className="search-box"
           type="search"
           placeholder="Search Monsters"
+          /**
+           * The following function is created every time it gets rendered and as this function
+           * is not changing on every render so it can be used to optimize our current implementation.
+           * So, it would be good if we put this method in the component instead of putting in the 
+           * render function.
+           */
           onChange={(e) => {
             const searchField = e.target.value.toLowerCase();
 
