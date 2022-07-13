@@ -24,3 +24,6 @@
 5. now as the state has been changed by the lifecycle method of the component the render runs again
 
 In a nutshell every time setState() is called/runs the render function also runs leading to the rerender of the component. And also when the props gets updated.
+
+# CSS Styling
+CSS styles gets imported in the whole application and it doesn't matter we define it in separate files or not.
