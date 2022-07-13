@@ -13,3 +13,4 @@
 - Only use when the required data needed to render component 
 
 # Components
+- UI represantation, can be small as a single button or complex as a page.
