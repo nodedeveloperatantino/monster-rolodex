@@ -11,3 +11,5 @@
 - It happens once in the components lifecycle and also that happens when the application loads for the first time.
 - It can be remounted only if the component has been completely unmounted or removed from the application.
 - Only use when the required data needed to render component 
+
+# Components

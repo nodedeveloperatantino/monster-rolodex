@@ -3,6 +3,7 @@ import { Component } from "react";
 
 // import logo from "./logo.svg";
 import "./App.css";
+import CardList from "./components/card-list/card-list.component";
 
 class App extends Component {
   constructor(props) {
@@ -12,8 +13,6 @@ class App extends Component {
       monsters: [],
       searchField: "",
     };
-
-    console.log("constructor");
   }
 
   componentDidMount() {
@@ -24,7 +23,6 @@ class App extends Component {
           return { monsters: users };
         })
       );
-    console.log("ComponentDidMount");
   }
 
   onSearchChange = (e) => {
@@ -36,8 +34,6 @@ class App extends Component {
   };
 
   render() {
-    console.log("Renderer");
-
     // Destructuring: helps in reducing the use of this keyword.
     const { monsters, searchField } = this.state;
     const { onSearchChange } = this;
@@ -54,9 +50,11 @@ class App extends Component {
           placeholder="Search Monsters"
           onChange={onSearchChange}
         />
-        {filteredMonsters.map((monster, index) => {
-          return <h1 key={index}>{monster.name}</h1>;
-        })}
+        {//filteredMonsters.map((monster, index) => {
+          //return <h1 key={index}>{monster.name}</h1>;
+        //})
+        }
+        <CardList monsters={filteredMonsters} />
       </div>
     );
   }
